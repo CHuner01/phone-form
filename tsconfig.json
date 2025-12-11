@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "components/*": ["components/*"],
+      "assets/*": ["assets/*"],
+      "config/*": ["config/*"],
+      "pages/*": ["pages/*"],
+      "store/*": ["store/*"],
+      "styles/*": ["styles/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"],
+      "entities/*": ["entities/*"]
+    },
+    "jsx": "react"
+  }
+}
