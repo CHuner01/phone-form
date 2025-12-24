@@ -1,5 +1,18 @@
 {
   "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "baseUrl": "./src",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
     "paths": {
       "components/*": ["components/*"],
       "assets/*": ["assets/*"],
@@ -10,7 +23,6 @@
       "types/*": ["types/*"],
       "utils/*": ["utils/*"],
       "entities/*": ["entities/*"]
-    },
-    "jsx": "react"
+    }
   }
 }
