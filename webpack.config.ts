@@ -21,7 +21,34 @@ const config: WebpackConfig = {
     mode: IS_PROD ? 'production' : 'development',
     module: {
         rules: [
-            { test:  /\.s[ac]ss$/i, use: [ 'style-loader', 'css-loader', 'postcss-loader', 'sass-loader' ] },
+            // { test:  /\.module\.(css|scss|sass)$/,
+            //     use: [ 'style-loader', {
+            //         loader: 'css-loader',
+            //         options: {
+            //             modules: true,
+            //         },
+            //     }, 'postcss-loader', 'sass-loader' ]
+            // },
+            {
+                test: /\.module\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName: '[name]__[local]__[hash:base64:5]',
+                            },
+                        },
+                    },
+                    'sass-loader',
+                ],
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                exclude: /\.module\.s[ac]ss$/i,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
             {
                 test: /\.html$/i,
                 loader: "html-loader",

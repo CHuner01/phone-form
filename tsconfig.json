@@ -23,6 +23,12 @@
       "types/*": ["types/*"],
       "utils/*": ["utils/*"],
       "entities/*": ["entities/*"]
-    }
-  }
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
+  },
+  "include": ["./declaration.d.ts", "typings.d.ts"]
 }
